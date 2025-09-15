@@ -18,9 +18,9 @@ public class Stock
     double numberOfShares;
     double pricePerShare;
     double sharesValue;
-    final double commission; 
-    double totalCost;
-    
+    double commission; 
+    double totalCostShares;
+    final double COMM_RATE = 0.02;
     //prompt user to enter Price per share + Number of shares
       System.out.println("Enter number of shares purchased: ");
         numberOfShares = keyboard.nextDouble();
@@ -28,11 +28,10 @@ public class Stock
         pricePerShare = keyboard.nextDouble();
     //Calculate
     sharesValue = numberOfShares * pricePerShare;
-    commission = sharesValue * 0.02;
-    totalCost = sharesValue + commission;
+    commission = sharesValue * COMM_RATE;
+    totalCostShares = sharesValue + commission;
     //print total share value, commission, and total cost
-      System.out.println("Total cost of shares are: $" + sharesValue);
-      System.out.println("Commission cost is: $" + commission);
-      System.out.println("Total cost is: $" + totalCost);
+      System.out.printf("Total cost of shares are: $%,.2f\nCommission cost is: $ %,.2f\nTotal Cost is: $%,.2f",
+      sharesValue, commission, totalCostShares);
   }
 }

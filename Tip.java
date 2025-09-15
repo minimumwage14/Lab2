@@ -32,8 +32,9 @@ public class Tip
     tipAmount = 0.20 * (taxAmount + mealAmount);
     totalCost = mealAmount + taxAmount + tipAmount;
     //print total share value, commission, and total cost
-      System.out.println("Tax amount is: $" + taxAmount);
-      System.out.println("Tip amount is: $" + tipAmount);
-      System.out.println("Total bill is: $" + totalCost);
+      System.out.printf("\nThe tax is: $%,.2f", taxAmount);
+      System.out.printf("\nThe tip amount is: $%,.2f", tipAmount);
+      System.out.printf("\nThe meal cost with tax and tip is: $%,.2f", totalCost);
+      
   }
 }
